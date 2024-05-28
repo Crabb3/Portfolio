@@ -9,7 +9,7 @@ const HLCard = (props) => {
   useEffect(() => {
     VanillaTilt.init(tilt.current, {
       scale: 1.1,
-      max: 25,
+      max: 20,
       speed: 400,
     });
   });
@@ -19,7 +19,13 @@ const HLCard = (props) => {
       ref={tilt}
       className="w-72 h-96 flex flex-col border-2 border-[#848] bg-white my-10 rounded-xl p-4"
     >
-      <Image src={prop.img} width={280} height={280} alt={prop.img} />
+      <Image
+        src={prop.img}
+        width={300}
+        height={300}
+        alt={prop.img}
+        className="w-auto h-56 object-fill"
+      />
       <div className="w-52 text-xl self-center flex justify-center font-bold border-[#848] border-2 rounded-full p-2 my-2">
         {prop.name}
       </div>

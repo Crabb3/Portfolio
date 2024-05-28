@@ -14,7 +14,7 @@ const Intro = () => {
         />
       </div>
       <div className="w-1/2 flex flex-col gap-4 items-center justify-center">
-        <p className="text-3xl mt-4">Tang-Ming Hsu (許唐銘)</p>
+        <p className="text-3xl mt-4">Denny Hsu</p>
         <div className="flex gap-4">
           <a href="https://github.com/TMHsu-0413">
             <Image

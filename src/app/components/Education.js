@@ -9,8 +9,9 @@ const Education = () => {
           <p className="text-xl font-bold self-center">碩士二年級</p>
           <p className="text-sm text-gray-400">國立中正大學 資訊工程研究所</p>
           <ul className="text-grey break-words list-disc pl-4">
-            <li>與中研院教授合作完成論文，領域為量子網路與近似演算法</li>
+            <li>與中研院教授合作完成論文，研究領域為量子網路與近似演算法</li>
             <li>利用課餘時間製作Side Project，增進網頁開發技術</li>
+            <li>撰寫解題筆記，將解題想法與技巧分享給其他人</li>
             <li>學習程式語言: Next.js、Golang、D3.js</li>
           </ul>
         </div>
@@ -25,7 +26,7 @@ const Education = () => {
             <li>
               參與網頁開發課程，並用課餘時間製作Side Project，學習更多相關知識
             </li>
-            <li>參與LeetCode Contest，並達到Rating 2100+</li>
+            <li>參與LeetCode Contest，並達到Rating 2000+</li>
             <li>
               學習程式語言與工具: React.js、Express.js、Docker、Github Actions
             </li>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Intro from "./components/Intro";
 import Education from "./components/Education";
-import Project from "./components/Project";
 import Work from "./components/Work";
 import Highlight from "./components/Highlight";
 import Header from "./components/Header";
@@ -14,7 +13,6 @@ export default function Home() {
       <Highlight />
       <Education />
       <Work />
-      <Project />
     </div>
   );
 }

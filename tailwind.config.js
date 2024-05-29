@@ -14,5 +14,54 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".nthChild:nth-child(odd)": {
+          "border-left": "3px solid #848",
+          "padding-left": "3em",
+          transform: "translateX(190.5px)",
+        },
+        ".nthChild:nth-child(even)": {
+          "border-right": "3px solid #848",
+          "padding-right": "3em",
+          transform: "translateX(-190.5px)",
+        },
+        ".nthChild:nth-child(even)::before, .nthChild:nth-child(odd)::before": {
+          content: "' '",
+          background: "#848",
+          width: "3em",
+          height: "3px",
+          position: "absolute",
+          top: "50%",
+          transform: "translateY(-50%)",
+        },
+        ".nthChild:nth-child(odd)::before": {
+          left: "0",
+        },
+        ".nthChild:nth-child(even)::before": {
+          right: "0",
+        },
+        ".nthChild:nth-child(even) div::before, .nthChild:nth-child(odd) div::before":
+          {
+            content: "' '",
+            background: "#848",
+            height: "1em",
+            position: "absolute",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: "1em",
+            "border-radius": "50%",
+          },
+        ".nthChild:nth-child(odd) div::before": {
+          left: "-9px",
+        },
+        ".nthChild:nth-child(even) div::before": {
+          right: "-9px",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive"]);
+    },
+  ],
 };

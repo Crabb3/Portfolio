@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
-import "./Education.css";
 const Education = () => {
   useEffect(() => {
-    const element = document.querySelectorAll(".box");
+    const element = document.querySelectorAll(".nthChild");
 
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].intersectionRatio <= 0) return;
@@ -24,10 +23,10 @@ const Education = () => {
     };
   });
   return (
-    <div className="p-4 flex flex-col items-center">
-      <div className="text-4xl mb-4">求學經歷</div>
+    <div className="p-4 flex flex-col items-center sm:items-center">
+      <div className="text-4xl mb-8">求學經歷</div>
 
-      <div className="nthChild max-w-96 relative box">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 relative">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">碩士二年級</p>
           <p className="text-sm text-gray-400">國立中正大學 資訊工程研究所</p>
@@ -40,7 +39,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="nthChild max-w-96 relative box">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 relative">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">碩士一年級</p>
           <p className="text-sm text-gray-400">國立中正大學 資訊工程研究所</p>
@@ -57,7 +56,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="nthChild max-w-96 box">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學四年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>
@@ -76,7 +75,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="nthChild max-w-96 box">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學三年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>
@@ -91,7 +90,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="nthChild max-w-96 box">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學二年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>

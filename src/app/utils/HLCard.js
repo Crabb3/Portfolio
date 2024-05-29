@@ -17,20 +17,24 @@ const HLCard = (props) => {
   return (
     <div
       ref={tilt}
-      className="w-72 h-96 flex flex-col border-2 border-[#848] bg-white my-10 rounded-xl p-4"
+      className="lg:max-w-72 lg:h-96 md:max-w-64 md:h-80 sm:max-w-72 sm:h-96 flex flex-col justify-between border-2 border-[#848] bg-white my-10 rounded-xl p-4"
     >
-      <Image
-        src={prop.img}
-        width={300}
-        height={300}
-        alt={prop.img}
-        className="w-auto h-56 object-fill"
-      />
-      <div className="w-52 text-xl self-center flex justify-center font-bold border-[#848] border-2 rounded-full p-2 my-2">
-        {prop.name}
+      <div className="self-center lg:w-64 lg:h-64 md:w-48 md:h-48 sm:w-64">
+        <Image
+          src={prop.img}
+          width={500}
+          height={500}
+          alt=""
+          objectFit="cover"
+        />
       </div>
-      <div className="p-2 text-sm text-gray-400 justify-self-end">
-        {prop.util}
+      <div className="flex flex-col">
+        <div className="lg:w-52 md:w-40 sm:w-52 text-xl self-center flex justify-center font-bold border-[#848] border-2 rounded-full p-2 my-2">
+          {prop.name}
+        </div>
+        <div className="p-2 text-md text-gray-500 justify-self-end">
+          {prop.util}
+        </div>
       </div>
     </div>
   );

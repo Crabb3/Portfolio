@@ -12,7 +12,7 @@ const page = () => {
           src="https://tmhsu-0413.github.io/"
           Title="Link-in-bio"
           gh="https://github.com/TMHsu-0413/TMHsu-0413.github.io"
-          content="一頁式網站，搭配一些美化特效"
+          content="一頁式網站，包含簡單的個人簡介，搭配一些美化特效"
           ImageSrc="/spImage/Link_in_bio.jpg"
           tag="#react.js #vanta.js #tailwindCSS"
         />
@@ -20,7 +20,7 @@ const page = () => {
           src="https://graph-visualizer-three.vercel.app/graph"
           Title="Graph Visualizer"
           gh="https://github.com/TMHsu-0413/Graph-Visualizer"
-          content="可根據LeetCode題目為Graph或Tree選擇，並動態產生出拓樸，以便debug時使用"
+          content="可根據LeetCode題目為Graph或Tree選擇，並動態產生出視覺化圖行，以便debug使用"
           ImageSrc="/spImage/Graph_visual.jpg"
           tag="#next.js #d3.js #tailwindCSS"
         />
@@ -44,9 +44,17 @@ const page = () => {
           Title="Blog Life"
           gh="https://github.com/TMHsu-0413/CCU_web_hw3"
           yt="https://youtu.be/BmyGGveNl6w"
-          content="模擬部落格功能"
+          content="模擬部落格，包含登入驗證，CRUD功能，並動態抓取最新的前3筆文章顯示在主頁面"
           ImageSrc="/spImage/Blog.jpg"
-          tag="#react.js #PHP #Bootstrap #MySQL"
+          tag="#react.js #PHP #Bootstrap #MySQL #Docker"
+        />
+        <SPcard
+          Title="Calculator"
+          gh="https://github.com/TMHsu-0413/CCU_web_hw2"
+          yt="https://youtu.be/M9k6Oa0hBTI"
+          content="計算機與亂數骰子，練習React Hooks，Ex. useState useReducer useContext"
+          ImageSrc="/spImage/Calculator.jpg"
+          tag="#react.js"
         />
       </div>
     </div>

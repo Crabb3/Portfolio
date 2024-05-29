@@ -5,7 +5,7 @@ const About = () => {
     <div className="border-t-2 border-t-black p-4">
       <h2 className="text-4xl pl-5">關於我</h2>
       <p>
-        我是Denny，目前就讀國立中正大學資工所碩二，從大學期間接觸到程式競賽後開始練習coding能力至今
+        我是Denny，目前就讀國立中正大學資工所碩二，從大學期間接觸到程式競賽後開始練習coding能力，
       </p>
       <h2>目前使用的語言與工具</h2>
       <ul>

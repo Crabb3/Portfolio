@@ -12,14 +12,14 @@ const SPcard = (props) => {
           <Image
             fill
             src={prop.ImageSrc}
-            alt={prop.ImageSrc}
-            objectFit="cover"
+            alt=""
+            style={{ objectFit: "cover" }}
           />
           <h2 className="text-2xl px-2 bottom-0 right-0 absolute bg-gray-400/[0.7] text-black">
             {prop.Title}
           </h2>
         </div>
-        <div className="backCard p-4 flex flex-col justify-between">
+        <div className="backCard p-4 flex flex-col justify-between ">
           <div>
             <h2 className="my-4 text-2xl font-bold flex justify-center">
               {prop.Title}

@@ -11,10 +11,10 @@ const Button = (props) => {
     <Link
       href={prop.src}
       className={clsx(
-        "border-t-2 border-l-2 border-r-2 hover:bg-[#848] hover:text-white p-2 rounded-t-md",
+        "border-t-2 border-l-2 border-r-2 border-[#848] hover:bg-[#848] hover:text-white p-2 rounded-t-md",
         {
           "bg-[#848] text-white": pathname === prop.src,
-          "border-black": pathname !== prop.src,
+          "border-[#848]": pathname !== prop.src,
         }
       )}
     >

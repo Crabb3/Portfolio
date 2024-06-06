@@ -3,7 +3,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div className="flex border-2 border-zinc-700 rounded p-3">
+    <div className="flex border-2 border-[#848] rounded p-3">
       <div className="w-1/2 flex justify-center">
         <Image
           src="/Profile_photo.jpg"

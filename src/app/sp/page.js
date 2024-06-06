@@ -4,9 +4,9 @@ import SPcard from "../components/SPcard";
 
 const page = () => {
   return (
-    <div className="w-2/3 bg-white relative m-auto p-4 flex flex-col">
+    <div className="w-2/3 relative m-auto p-4 flex flex-col">
       <Header />
-      <div className="border-t-2 border-black"></div>
+      <div className="border-t-2 border-t-[#848]"></div>
       <div className="flex gap-4 mt-4 justify-evenly flex-wrap">
         <SPcard
           src="https://tmhsu-0413.github.io/"

@@ -27,7 +27,7 @@ const Education = () => {
     <div className="p-4 flex flex-col items-center sm:items-center">
       <div className="text-4xl mb-8">求學經歷</div>
 
-      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 relative popout">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 opacity-0 relative popout">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">碩士二年級</p>
           <p className="text-sm text-gray-400">國立中正大學 資訊工程研究所</p>
@@ -35,12 +35,12 @@ const Education = () => {
             <li>與中研院教授合作完成論文，研究領域為量子網路與近似演算法</li>
             <li>利用課餘時間製作Side Project，增進網頁開發技術</li>
             <li>撰寫解題筆記，將解題想法與技巧分享給其他人</li>
-            <li>學習程式語言: Next.js、Golang、D3.js</li>
+            <li>學習程式語言: Next.js、D3.js、Flask、Restful API</li>
           </ul>
         </div>
       </div>
 
-      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 relative popout">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 opacity-0 relative popout">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">碩士一年級</p>
           <p className="text-sm text-gray-400">國立中正大學 資訊工程研究所</p>
@@ -57,7 +57,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box popout">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box opacity-0 popout">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學四年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>
@@ -76,7 +76,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box popout">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box opacity-0 popout">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學三年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>
@@ -91,7 +91,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box popout">
+      <div className="lg:nthChild sm:my-4 lg:my-0 max-w-96 box opacity-0 popout">
         <div className="border-2 border-[#828] p-3 rounded-xl flex flex-col gap-4">
           <p className="text-xl font-bold self-center">大學二年級</p>
           <p className="text-sm text-gray-400">國立虎尾科技大學 資訊工程系</p>

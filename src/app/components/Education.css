@@ -56,5 +56,5 @@
 }
 
 .animation {
-    animation: popup 1s ease-in;
+    animation: popup .5s forwards;
 }

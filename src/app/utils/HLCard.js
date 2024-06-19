@@ -32,7 +32,7 @@ const HLCard = (props) => {
         <div className="lg:w-52 md:w-40 sm:w-52 text-xl self-center text-[#4b0082] flex justify-center font-bold border-[#848] border-2 rounded-full p-2 my-2">
           {prop.name}
         </div>
-        <div className="p-2 text-md text-gray-500 justify-self-end">
+        <div className="p-2 text-md text-gray-600 justify-self-end">
           {prop.util}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import PariclessBG from "./part/ParticlesBG";
 import "./globals.css";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <PariclessBG />
-        {children}
+
+        <div className="w-2/3 text-white relative m-auto p-4">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

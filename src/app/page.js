@@ -7,12 +7,11 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <div className="w-2/3 text-white relative m-auto p-4">
-      <Header />
+    <div>
       <Intro />
       <Highlight />
       <Education />
-      <Work />
+      {/*<Work />*/}
     </div>
   );
 }

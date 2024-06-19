@@ -4,10 +4,9 @@ import About from "../components/About";
 
 const page = () => {
   return (
-    <div className="w-2/3 relative m-auto p-4">
-      <Header />
+    <>
       <About />
-    </div>
+    </>
   );
 };
 

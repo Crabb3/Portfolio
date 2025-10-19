@@ -3,7 +3,22 @@ import React, { useState, useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 
 const commandMap = {
-    "profile" : 'Name : Denny Hsu<br \>Age : 25<br \>'
+    "help" : [
+        '"profile" --> My profile',
+        '"education" --> My education journey',
+        '"cls" --> clear monitor'
+    ],
+    "profile" : [
+        'Name : Denny Hsu',
+        'Year of birth : 2000',
+        'Email : denny890413@gmail.com',
+        'Github : @Crabb3',
+        'LeetCode : @TMHsu'
+    ],
+    "education": [
+        'Master : National Chung Cheng University - Computer Science',
+        'Bachelor : National Formosa University - Computer Science'
+    ],
 };
 
 function Cli() {
@@ -13,19 +28,42 @@ function Cli() {
   const [res, setRes] = useState('')
   const typedRef = useRef(null);
   const typedEle = useRef(null);
+  const cliRef = useRef()
+
+
+  const printerEffectHtml = (arr) => {
+    let words = [...arr]
+    let divHeader = '<div class="inline w-full"> <span class="mr-2">&gt;</span>'
+    let divFooter = '</div><div></div>'
+    for(let i=0; i<words.length; i++)
+        words[i] = divHeader + words[i] + divFooter
+    return words.join('')
+  }
+
+  const scrollToBottom = (() => {
+    if (cliRef.current){
+        cliRef.current.scrollTop = cliRef.current.scrollHeight
+    }
+  })
 
   // 動態打字動畫（只動作在最新一行回應）
   useEffect(() => {
     if (!typing || res === '' || !typedEle.current) return;
+    var newWords = printerEffectHtml(res)
+    let scrollDetector = null
     const typed = new Typed(typedEle.current, {
-    strings: ['> ' + res],
-    typeSpeed: 40,
+    strings: [newWords],
+    typeSpeed: 15,
+    onBegin: () => {
+        scrollDetector = setInterval(scrollToBottom,100)
+    },
     onComplete: () => {
         setTyping(false)
-        var sp = res.split('<br \>')
-        for(let i=0; i<sp.length; i++)
-            setLines(prev => [...prev, sp[i]])
+        for(let i=0; i<res.length; i++){
+            setLines(prev => [...prev, res[i]])
+        }
         setRes('')
+        clearInterval(scrollDetector)
     }});
     typedRef.current = typed;
     return () => typed.destroy();
@@ -34,13 +72,18 @@ function Cli() {
   // 處理命令輸入
   const handleInput = (e) => {
     if (e.key === 'Enter' && input.trim()) {
-      setTyping(true); // 觸發打字動畫
       const word = input
+      if (word === "cls"){
+        setLines([])
+        setInput('');
+        return;
+      }
+      setTyping(true); // 觸發打字動畫
       setLines(prev => [...prev, word]);
       setInput('');
       // 查詢指令回應
       setTimeout(() => {
-        const output = commandMap[input] || `${input}: command not found`;
+        const output = commandMap[input] || [`${input}: command not found`];
         setRes(output)
       }, 300);
     }
@@ -48,12 +91,15 @@ function Cli() {
 
   return (
     <div 
-     style={{
-      background: 'black', color: 'lime', fontFamily: 'monospace',
-      padding: '1em', minHeight: '20em'
-    }}>
+      class="bg-black font-mono text-lime-400 p-5 min-h-96 max-h-96 overflow-auto"
+      ref={cliRef}
+    >
       {lines.map((line, idx) => (
-        <div class="flex w-full" key={idx}><span class="mr-2">&gt;</span><div class="w-full">{line}</div></div>
+        <div class="flex w-full" key={idx}>
+            <span class="mr-2">
+                &gt;
+            </span>
+        <div class="w-full">{line}</div></div>
       ))}
       { <div class="inline" ref={typedEle}  /> }
       {!typing && <div class="w-full text-nowrap"><span class="mr-2">&gt;</span>
@@ -61,11 +107,7 @@ function Cli() {
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={handleInput}
-            class="w-full"
-            style={{
-            background: 'black', color: 'lime', border: 'none',
-            fontFamily: 'monospace', outline: 'none'
-            }}
+            class="w-full bg-black font-mono text-lime-400 bottom-0 outline-none"
             autoFocus
             disabled={typing}
         />

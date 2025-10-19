@@ -9,7 +9,6 @@ import Cli from "./components/Cli";
 export default function Home() {
   return (
     <div>
-      <Cli />
       <Intro />
       <Highlight />
       <Education />

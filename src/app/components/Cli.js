@@ -95,7 +95,7 @@ function Cli() {
 
   return (
     <div 
-      class="justify-center items-center bg-black font-mono text-lime-400 p-5 w-full min-h-96 max-h-96 overflow-auto custom-scrollbar"
+      class="bg-black font-mono text-lime-400 p-5 w-full min-h-[500px] max-h-[500px] overflow-auto custom-scrollbar"
       ref={cliRef}
     >
       {lines.map((line, idx) => (

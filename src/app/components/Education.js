@@ -6,11 +6,10 @@ const Education = () => {
     const element = document.querySelectorAll(".popout");
 
     const observer = new IntersectionObserver((entries) => {
-      if (entries[0].intersectionRatio <= 0) return;
-      entries[0].target.classList.toggle(
-        "animation",
-        entries[0].isIntersecting
-      );
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("animation");
+      })
     });
 
     element.forEach((el) => {

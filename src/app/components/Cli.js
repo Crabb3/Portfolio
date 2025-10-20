@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react';
 import Typed from 'typed.js';
+import "./Cli.css";
 
 const commandMap = {
     "help" : [
@@ -19,6 +20,9 @@ const commandMap = {
         'Master : National Chung Cheng University - Computer Science',
         'Bachelor : National Formosa University - Computer Science'
     ],
+    "test": [
+        '1','2','3','4','5','6','7','8','9','1','2','3','4','5'
+    ]
 };
 
 function Cli() {
@@ -53,7 +57,7 @@ function Cli() {
     let scrollDetector = null
     const typed = new Typed(typedEle.current, {
     strings: [newWords],
-    typeSpeed: 15,
+    typeSpeed: 0,
     onBegin: () => {
         scrollDetector = setInterval(scrollToBottom,100)
     },
@@ -91,7 +95,7 @@ function Cli() {
 
   return (
     <div 
-      class="bg-black font-mono text-lime-400 p-5 min-h-96 max-h-96 overflow-auto"
+      class="justify-center items-center bg-black font-mono text-lime-400 p-5 w-full min-h-96 max-h-96 overflow-auto custom-scrollbar"
       ref={cliRef}
     >
       {lines.map((line, idx) => (

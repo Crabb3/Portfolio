@@ -63,5 +63,6 @@ module.exports = {
 
       addUtilities(newUtilities, ["responsive"]);
     },
+    require('tailwind-scrollbar')
   ],
 };
